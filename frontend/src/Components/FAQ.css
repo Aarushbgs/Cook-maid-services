@@ -1,0 +1,45 @@
+/* FAQ.css */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .faq-container h2{
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-question:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .faq-answer {
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    animation: fadeIn 0.5s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
