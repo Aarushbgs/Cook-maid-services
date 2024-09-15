@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import {Link }from 'react-router-dom'
 const Navbar = () => {
   return (
    <nav className='navbar'>
@@ -18,7 +19,11 @@ CookNClean
 
 
 <div className='loginbutton'>
+
+<Link to="/login"> 
 <button className='btn'>Login</button>
+</Link>
+
 <button className='btn'>SignIn</button>
 </div>
    </nav>

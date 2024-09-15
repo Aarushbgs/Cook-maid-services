@@ -1,17 +1,18 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
-import Header from './Pages/Header'
-import Testimonials from './Components/Testimonials'
-import Faq from './Components/FAQ'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Frontpage from './Pages/Frontpage';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
 
 const App = () => {
   return (
-  <>
-  <Navbar/>
-  <Header/>
-  <Testimonials/>
-  <Faq/>
-  </>
+  <Router>
+    <Routes>
+      <Route path='/' element={<Frontpage/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+    </Routes>
+  </Router>
   )
 }
 
