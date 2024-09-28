@@ -59,7 +59,7 @@ try {
             success: true,
             jwtToken,
             email,
-            name: user.name
+            name: user.username
         });
 
     } catch (error) {

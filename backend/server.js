@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors= require('cors');
 
 const AuthRouter= require('./Routes/AuthRouter');
+const findroute= require('./Routes/worker');
 
 
 require('./Models/db');
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.use('/auth', AuthRouter);
 
+app.use('/worker',findroute);
 
 
 const port = process.env.PORT || 8000;

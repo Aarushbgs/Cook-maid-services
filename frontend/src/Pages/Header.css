@@ -21,8 +21,11 @@
     display: flex;
     margin-top: 3rem;
 }
+
+
 .button {
-    width: 20%;
+    width: auto; /* Make the buttons auto-width */
+    min-width: 150px; /* Ensure buttons are not too small */
     padding: 0.7rem 1.5rem;
     background-color: lightseagreen;
     color: white;

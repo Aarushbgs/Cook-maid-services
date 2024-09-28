@@ -1,55 +1,14 @@
-// import React, { useState } from 'react'
-
-// const Login = () => {
-// const [form, setform] = useState({
-//   email:'',
-//   password:''
-// });
-
-// const handleChange= (e)=>{
-// setform({...form,[e.target.name]:e.target.value});
-// console.log(form);
-// };
-
-// const handleSubmit=async (e)=>{
-// e.preventDefault();
-
-// };
-
-//   return (
-
-//     <div className='login-page'>
-//      <form onSubmit={handleSubmit}>
-//         <label htmlFor='email'>Email</label>
-//         <input
-//         type='email'
-//         name='email'
-//         placeholder='Enter your mail Id'
-//         onChange={handleChange}
-//         />
-
-//    <label htmlFor='password'>Password</label>
-//         <input
-//         type='password'
-//         name='password'
-//         placeholder='Enter your password'
-//         onChange={handleChange}
-//         />
-
-// <button type="submit">Login</button>
-
-//      </form>
-//     </div>
-//   )
-// }
-
-// export default Login
-
-
 import React, { useState } from 'react';
-import './Login.css'; // Assuming you will add CSS styles in this file
-import {Link} from 'react-router-dom'
+import './Login.css'; 
+import {Link, useNavigate} from 'react-router-dom'
+import { ToastContainer } from 'react-toastify';
+import { handleError, handleSuccess } from '../utils';
+
+
 const Login = () => {
+
+  const navigate= useNavigate();
+
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -64,7 +23,7 @@ const Login = () => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
 
-    // Basic validation
+
     if (name === 'email') {
       setErrors({
         ...errors,
@@ -79,14 +38,53 @@ const Login = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+
+
+
+const handleSubmit = async (e) => {
     e.preventDefault();
     // Add your submit logic here
-    if (errors.email || errors.password) {
-      console.log('Form has errors');
-      return;
-    }
-    console.log('Form data:', form);
+   const {email,password}=form;
+
+   if (!email || !password) {
+    return handleError('email and password are required')
+}
+
+try {
+  const url =`http://localhost:8000/auth/login`;
+  
+  const res= await fetch (url,{
+    method:"POST",
+    headers:{
+       'Content-Type': 'application/json'
+    }, 
+    body: JSON.stringify(form)
+  });
+
+  const result= await res.json();
+
+  const { success, message, jwtToken, username, error } = result;
+  if (success) {
+    handleSuccess(message);
+    localStorage.setItem('token', jwtToken);
+    localStorage.setItem('loggedInUser',username);
+    setTimeout(() => {
+        navigate('/home')
+    }, 1000)
+} else if (error) {
+    const details = error?.details[0].message;
+    handleError(details);
+} else if (!success) {
+    handleError(message);
+}
+
+  console.log('result');
+
+  
+} catch (error) {
+  handleError(error);
+}
+
   };
 
   return (
@@ -124,7 +122,7 @@ const Login = () => {
      Signup
   </Link>
       </form>
-  
+      <ToastContainer />
     </div>
   );
 }

@@ -1,0 +1,46 @@
+.usernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 7px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+
+  }
+  
+  .usernav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .usernav ul li {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .usernav ul li:hover {
+    color: #007bff;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: gray;
+  }
+  
