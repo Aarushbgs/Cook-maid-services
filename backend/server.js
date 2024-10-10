@@ -4,7 +4,12 @@ const app= express();
 const bodyParser = require('body-parser');
 const cors= require('cors');
 app.use(bodyParser.json());
-app.use(cors());
+
+app.use(cors({
+  origin: 'https://cook-maid-services-ui.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 
@@ -19,12 +24,7 @@ const Attendance= require('./Models/Attendance');
 require('./Models/db');
 require('dotenv').config();
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://cook-maid-services-ui.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-});
+
 
 
 
