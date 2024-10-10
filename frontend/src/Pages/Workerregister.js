@@ -18,7 +18,7 @@ const Workerregister = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:8000/worker/add', {
+      const response = await fetch('https://cook-maid-services.vercel.app/worker/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
