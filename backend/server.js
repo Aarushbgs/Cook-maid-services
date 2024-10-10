@@ -3,6 +3,8 @@ const express= require('express');
 const app= express();
 const bodyParser = require('body-parser');
 const cors= require('cors');
+app.use(bodyParser.json());
+app.use(cors());
 
 const AuthRouter= require('./Routes/AuthRouter');
 const findroute= require('./Routes/worker');
@@ -16,8 +18,7 @@ require('./Models/db');
 require('dotenv').config();
 
 
-app.use(bodyParser.json());
-app.use(cors());
+
 
 app.get('/', (req, res) => {
     res.send('Hii..I am Aarush');
