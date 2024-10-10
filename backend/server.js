@@ -6,9 +6,9 @@ const cors= require('cors');
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: 'https://cook-maid-services-ui.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  origin: 'https://cook-maid-services-ui.vercel.app',  // Specify the frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allow these HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization']  // Allow these headers
 }));
 
 
