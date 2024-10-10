@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors= require('cors');
 app.use(bodyParser.json());
 const corsOptions = {
-  origin: 'https://cook-maid-services-lk7s.vercel.app/',  // Replace with your frontend URL
+  origin: 'https://cook-maid-services-lk7s.vercel.app/',  
   methods: 'GET,POST,PUT,DELETE',
   credentials: true,
   optionsSuccessStatus: 200
