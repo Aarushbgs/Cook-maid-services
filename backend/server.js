@@ -3,6 +3,18 @@ const express= require('express');
 const app= express();
 const bodyParser = require('body-parser');
 const cors= require('cors');
+app.use(bodyParser.json());
+const corsOptions = {
+  origin: 'https://cook-maid-services-lk7s.vercel.app/',  // Replace with your frontend URL
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
+
+
+
 
 const AuthRouter= require('./Routes/AuthRouter');
 const findroute= require('./Routes/worker');
@@ -16,8 +28,7 @@ require('./Models/db');
 require('dotenv').config();
 
 
-app.use(bodyParser.json());
-app.use(cors());
+
 
 app.get('/', (req, res) => {
     res.send('Hii..I am Aarush');
