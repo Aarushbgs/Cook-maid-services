@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
 }
 
 try {
-  const url =`http://localhost:8000/auth/login`;
+  const url =`https://cook-maid-services.vercel.app/auth/login`;
   
   const res= await fetch (url,{
     method:"POST",
