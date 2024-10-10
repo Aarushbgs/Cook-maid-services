@@ -1,5 +1,9 @@
 /* General layout for the search app */
 .search-app {
+    background-image: url(../Img/location4.png);
+    background-size: cover; 
+    background-position: bottom; 
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +14,8 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* Heading styling */
+
+
 .search-app h1 {
     color: #333;
     font-size: 2rem;
@@ -89,6 +94,12 @@ button:hover {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+    .search-app{
+        background-position: right;
+    }
+    .search-app h1 {
+        font-size: 1.5rem; 
+    }
     .card-container {
         grid-template-columns: 1fr;
     }

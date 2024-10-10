@@ -3,11 +3,13 @@ import Search from '../User/Search'
 
 
 
+
 const Home = () => {
   return (
     <>
 
 <Search/>
+
     </>
   )
 }

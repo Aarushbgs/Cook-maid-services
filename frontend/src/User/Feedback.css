@@ -1,0 +1,60 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100vw; 
+}
+
+.feedback-app {
+  background-image: url(../Img/feedback1.png);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100vw; 
+  height: 100vh; 
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  border: none;
+}
+
+.feedback-thank-you-message {
+  color: green;
+  font-size: 18px;
+}
+
+.feedback-form-group {
+  margin-bottom: 15px;
+}
+
+.feedback-form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.feedback-form-group select,
+.feedback-form-group textarea {
+  width: 80vw; 
+  max-width: 600px; 
+  padding: 12px; 
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+}
+
+.feedback-submit-btn {
+  background-color: lightseagreen;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.feedback-submit-btn:hover {
+  background-color: gray;
+}

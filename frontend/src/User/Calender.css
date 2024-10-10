@@ -1,0 +1,61 @@
+.calendar-container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin: 50px auto;
+  width: 50%;
+  margin-top: 8rem; 
+}
+
+.calendar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.calendar-wrapper .react-calendar {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  background-color: black;
+}
+
+.react-calendar__tile--active {
+  background: #007bff;
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #0056b3;
+}
+
+.present {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+.absent {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+.attendance-status {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.log-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.log-button:hover {
+  background-color: #0056b3;
+}

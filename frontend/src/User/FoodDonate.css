@@ -1,0 +1,121 @@
+.food-donation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #f4f4f9;
+}
+
+.food-donation-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+ 
+}
+
+.donation-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.left-donation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-donation img {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.6rem;
+}
+
+.left-donation p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.left-donation h2 {
+  font-size: 1.5rem;
+  color: lightseagreen;
+}
+
+.right-donation {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+.right-donation form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-donation label {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.right-donation input, 
+.right-donation textarea {
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  width: 100%;  
+  max-width: 100%; 
+}
+.right-donation textarea {
+  min-height: 4rem;
+}
+
+.right-donation button {
+  padding: 0.6rem 1.2rem;
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.right-donation button:hover {
+  background-color: #e66b00;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .food-donation-form h2 {
+    margin-top: 5rem;
+  }
+
+  .donation-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-donation,
+  .right-donation {
+    max-width: 100%;
+  }
+
+  /* Ensure input fields take full width on small screens */
+  .right-donation input,
+  .right-donation textarea {
+    width: 100%; /* Ensure input and textarea fields take full width on small screens */
+  }
+}

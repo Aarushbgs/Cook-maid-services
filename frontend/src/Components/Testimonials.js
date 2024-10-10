@@ -3,11 +3,15 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Testimonials.css';
 
+const imagePath = "src/Img/Cooking-bro.png";
+
+
+
 const testimonialsData = [
   {
     name: "John Doe",
     text: "Cook and Clean has transformed my home life. Delicious meals and a spotless home, what more could I ask for?",
-    image: "path/to/john-doe.jpg"
+    image: imagePath
   },
   {
     name: "Jane Smith",

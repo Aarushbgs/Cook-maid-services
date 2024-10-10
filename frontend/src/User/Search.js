@@ -11,6 +11,8 @@ const Search = () => {
     const [searched, setsearched] = useState(false);
 
 
+
+
     const handleSearch = async () => {
         try {
             const response = await fetch(`http://localhost:8000/worker/search?location=${location}&type=${serviceType}`);
@@ -69,7 +71,8 @@ const Search = () => {
                                     <h3>{service.name}</h3>
                                     <p><strong>Location:</strong> {service.location}</p>
                                     <p><strong>Type:</strong> {service.type}</p>
-                                    <p><strong>Monthly Fee:</strong> {service.fee}</p>
+                                    <p><strong>Monthly Fee:</strong> {service.Fee}</p>
+                                    <p><strong>Mobile no:</strong> {service.Mobile}</p>
                                 </div>
                             ))}
 

@@ -1,0 +1,36 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.store-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.store-buttons a img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.store-buttons a img:hover {
+    transform: scale(1.1);
+}
