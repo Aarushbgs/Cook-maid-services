@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+dotenv.config();
+    
+ const MongoUrl = process.env.MONG_URL;
 
-const MongoUrl= 'mongodb://localhost:27017/cheif';
 
 mongoose.connect(MongoUrl,{ useNewUrlParser: true, useUnifiedTopology: true })
        .then(()=>{

@@ -30,7 +30,7 @@ const AttendanceCalendar = () => {
   // Save attendance to backend using fetch
   const saveAttendance = async (date, status) => {
     try {
-      const response = await fetch('https://cook-maid-services.vercel.app/api/attendance', {
+      const response = await fetch('http://localhost:8000/api/attendance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const AttendanceCalendar = () => {
   // Fetch attendance log using fetch
   const fetchAttendanceLog = async () => {
     try {
-      const response = await fetch('https://cook-maid-services.vercel.app/api/attendance');
+      const response = await fetch('http://localhost:8000/api/attendance');
       if (response.ok) {
         const data = await response.json();
         setAttendanceLog(data);

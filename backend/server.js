@@ -26,6 +26,10 @@ app.get('/', (req, res) => {
     res.send('Hii..I am Aarush');
   });
 
+  app.get('/ping', (req, res) => {
+    res.send('PONG');
+});
+
 app.use('/auth', AuthRouter);
 
 app.use('/email',EmailRoutes);

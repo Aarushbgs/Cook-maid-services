@@ -19,7 +19,7 @@ const Feedback = () => {
     e.preventDefault();
     
     try {
-      const res = await fetch('https://cook-maid-services.vercel.app/email/complain', {
+      const res = await fetch('http://localhost:8000/email/complain', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
