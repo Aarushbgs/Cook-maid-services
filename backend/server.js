@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const cors= require('cors');
 
 const corsOptions = {
-  origin: '*',  // Allow all origins for testing
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+    origin: ['https://cook-maid-services-qspn.vercel.app'], 
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
 };
 
 
@@ -35,9 +35,7 @@ require('dotenv').config();
 
 
 
-app.get('/ping', (req, res) => {
-    res.send('PONG');
-});
+
 
 app.get('/', (req, res) => {
     res.send('Hii..I am Aarush');
