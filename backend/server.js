@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const cors= require('cors');
 
 const corsOptions = {
-  origin: ['https://cook-maid-services-ui.vercel.app', 'https://cook-maid-services-qspn.vercel.app'],  
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  
-  credentials: true  
+  origin: '*',  // Allow all origins for testing
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 };
 
 
