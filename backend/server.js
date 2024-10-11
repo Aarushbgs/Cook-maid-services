@@ -14,10 +14,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-app.use((req, res, next) => {
-  console.log('Request Headers:', req.headers);
-  next();
+app.use((err, req, res, next) => {
+    console.error('Error occurred:', err); // Log the error for debugging
+    res.status(500).json({ message: 'Internal server error' });
 });
+
 
 
 
