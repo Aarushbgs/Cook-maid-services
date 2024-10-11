@@ -4,14 +4,16 @@ const app= express();
 const bodyParser = require('body-parser');
 const cors= require('cors');
 
+require('./Models/db');
+require('dotenv').config();
+
 const corsOptions = {
-    origin: ['https://cook-maid-services-qspn.vercel.app'], 
+    origin: 'https://cook-maid-services-qspn.vercel.app', // Change this to your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 };
 
-
-app.use(cors(corsOptions));
+app.use(cors(corsOptions))
 app.use(bodyParser.json());
 
 app.use((err, req, res, next) => {
@@ -31,8 +33,7 @@ const EmailRoutes =require ('./Routes/emailroute');
 
 const Attendance= require('./Models/Attendance');
 
-require('./Models/db');
-require('dotenv').config();
+
 
 
 
