@@ -14,6 +14,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  console.log('Request Headers:', req.headers);
+  next();
+});
+
 
 
 
