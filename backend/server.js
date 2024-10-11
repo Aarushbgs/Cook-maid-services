@@ -5,11 +5,7 @@ const bodyParser = require('body-parser');
 const cors= require('cors');
 
 
-app.use(cors({
-  origin: 'https://cook-maid-services-ui.vercel.app',  // Specify the frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allow these HTTP methods
-  credentials:true;
-}));
+app.use(cors());
 
 app.use(bodyParser.json());
 
