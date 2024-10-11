@@ -32,7 +32,7 @@ const navigate = useNavigate();
  try {
   
   
-const url=`https://cook-maid-services.vercel.app//auth/signup`;
+const url=`https://cook-maid-services.vercel.app/auth/signup`;
 
 const res= await fetch(url,{
   method:"POST",
