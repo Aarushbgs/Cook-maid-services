@@ -26,7 +26,9 @@ require('dotenv').config();
 
 
 
-
+app.get('/ping', (req, res) => {
+    res.send('PONG');
+});
 
 app.get('/', (req, res) => {
     res.send('Hii..I am Aarush');
