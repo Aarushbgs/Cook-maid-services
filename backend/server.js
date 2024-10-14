@@ -8,7 +8,7 @@ require('./Models/db');
 require('dotenv').config();
 
 const corsOptions = {
-    origin: 'https://cook-maid-services-qspn.vercel.app', // Change this to your frontend URL
+    origin: 'https://cook-maid-services-qspn.vercel.app/', // Change this to your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 };
